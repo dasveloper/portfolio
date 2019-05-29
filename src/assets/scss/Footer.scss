@@ -1,0 +1,20 @@
+.footer-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 0;
+
+    .footer-text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $gray-dark;
+        font-size: .8rem;
+        .footer-icon{
+            margin: 0 .25rem;
+            color: $danger;
+        }
+    }
+
+  }
+  

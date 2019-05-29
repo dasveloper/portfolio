@@ -1,0 +1,68 @@
+$break-sm: 468px;
+$break-md: 768px;
+$break-lg: 1200px;
+@import "./Colors.scss";
+
+@import "./Nav.scss";
+@import "./Intro.scss";
+@import "./ProjectList.scss";
+@import "./Tags.scss";
+@import "./Footer.scss";
+@import "./Contact.scss";
+
+.html,
+body {
+  margin: 0;
+  padding: 0;
+  background: $gray-extra-light;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.btn {
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  background: transparent;
+  color: $black;
+  border: 2px solid $black;
+  font-weight: 400;
+  border-radius: 4px;
+  background: $white;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    background: $black;
+    color: $white;
+  }
+}
+
+
+
+.container {
+  background: $gray-extra-light;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  &.centered{
+    align-items: center;
+  }
+  &:after {
+    opacity: 0.4;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh;
+    background: rgb(240, 240, 240);
+    background: linear-gradient(
+      0deg,
+      rgba(240, 240, 240, 1) 15%,
+      rgba(200, 200, 200, 1) 96%
+    );
+    border-top-left-radius: 250% 160px;
+    border-top-right-radius: 250% 160px;
+  }
+}
