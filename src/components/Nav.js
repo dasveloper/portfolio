@@ -25,10 +25,18 @@ class Nav extends Component {
           <Link to={"/"} className={`btn ${pathname === "/" ? "active" : ""}`}>
             Projects
           </Link>
-          <Link to={"contact"} className={`btn ${pathname === "/contact" ? "active" : ""}`}>
+          <Link
+            to={"contact"}
+            className={`btn ${pathname === "/contact" ? "active" : ""}`}
+          >
             Contact
           </Link>
-          <button className="btn">Resume</button>
+          <Link
+            to={"resume"}
+            className={`btn ${pathname === "/resume" ? "active" : ""}`}
+          >
+            Resume
+          </Link>{" "}
         </div>
       </nav>
     );

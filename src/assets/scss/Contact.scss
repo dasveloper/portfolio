@@ -76,22 +76,23 @@
         font-weight: 100;
         &::-webkit-input-placeholder {
           /* Chrome/Opera/Safari */
-          color: $gray-medium;
+          color: $gray-dark;
         }
         &::-moz-placeholder {
           /* Firefox 19+ */
-          color: $gray-medium;
+          color: $gray-dark;
         }
         &:-ms-input-placeholder {
           /* IE 10+ */
-          color: $gray-medium;
+          color: $gray-dark;
         }
         &:-moz-placeholder {
           /* Firefox 18- */
-          color: $gray-medium;
+          color: $gray-dark;
         }
       }
       .submit-form {
+          background:$white;
         &:disabled {
           opacity: 0.4;
           pointer-events: none;

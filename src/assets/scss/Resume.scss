@@ -1,0 +1,36 @@
+.resume-card-wrapper {
+    background: $white;
+    padding: 0.5rem;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    .resume-card-top {
+      display: flex;
+      flex-direction: column;
+      padding: 0.5rem;
+      justify-content: center;
+      align-items: center;
+      .btn {
+          margin:.5rem;
+          min-width: 200px;
+      }
+    }
+    .resume-card-bottom {
+      display: flex;
+      padding: 0.5rem;
+      justify-content: center;
+
+    }
+  }
+
+  @media screen and (min-width: $break-md) {
+    .resume-card-wrapper {
+      padding: 2rem;
+      .resume-card-top {
+       
+        flex-direction: row;
+       
+      }
+    }
+  }
