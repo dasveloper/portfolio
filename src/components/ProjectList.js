@@ -244,13 +244,13 @@ class ProjectList extends Component {
                         style={{ backgroundColor: project.color }}
                         className="project-logo"
                       >
-                        <img src={project.logo} />
+                        <img alt={`${project.name} logo `} src={project.logo} />
                       </div>
                       <h3 className="project-title">{project.name}</h3>
                     </div>
                     <div className="project-tags">
                       {project.tags.map(function(tag, i) {
-                        return <div className="project-tag">{tag}</div>;
+                        return <div key={i} className="project-tag">{tag}</div>;
                       })}
                     </div>
                     <p className="project-description">
@@ -261,6 +261,7 @@ class ProjectList extends Component {
                       {project.link && (
                         <a
                           target="_blank"
+                          rel="noopener noreferrer"
                           href={project.link}
                           className="project-button website"
                         >
@@ -281,7 +282,7 @@ class ProjectList extends Component {
                     className="project-image-wrapper"
                   >
                   <LazyLoad offset={100}>
-                    <img className="project-image" src={project.image} />
+                    <img alt={`${project.name} screenshot`}className="project-image" src={project.image} />
                     </LazyLoad>
 
                   </div>

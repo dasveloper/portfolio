@@ -5,7 +5,7 @@ const Intro = () => {
   return (
     <div className="intro-wrapper">
       <div className="avatar-wrapper">
-        <img className="avatar" src={Avatar} />
+        <img alt="Justin's avatar" className="avatar" src={Avatar} />
       </div>
     </div>
   );

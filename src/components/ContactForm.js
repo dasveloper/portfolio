@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { FaFacebook, FaLinkedinIn, FaGithub, FaSpinner, FaCheck} from "react-icons/fa";
-import Firebase from "firebase";
-
+import { FaSpinner, FaCheck} from "react-icons/fa";
+import Firebase from 'firebase/app'
+import 'firebase/database'
 let config = {
   apiKey: "AIzaSyC4zalVwX6sajhweNGElnX6z3dQWEAVVZM",
   authDomain: "portfolio-7ade8.firebaseapp.com",
@@ -45,7 +45,6 @@ class ContactForm extends Component {
       Firebase.database()
         .ref("/contacts")
         .push(this.state.formValues, error => {
-          console.log(error);
           if (error)
             this.setState({
               formError: true,
@@ -91,7 +90,7 @@ class ContactForm extends Component {
       >
         <input
           type="text"
-          class="form-input"
+          className="form-input"
           name="subject"
           value={this.state.formValues.subject.value}
           onChange={this.formChangeHandler}
@@ -99,7 +98,7 @@ class ContactForm extends Component {
         />
         <input
           type="email"
-          class="form-input"
+          className="form-input"
           name="email"
           value={this.state.formValues.email.value}
           onChange={this.formChangeHandler}
@@ -107,7 +106,7 @@ class ContactForm extends Component {
         />
         <textarea
           rows="10"
-          class="form-textarea"
+          className="form-textarea"
           name="body"
           value={this.state.formValues.body.value}
           onChange={this.formChangeHandler}

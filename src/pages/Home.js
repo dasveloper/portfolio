@@ -21,7 +21,7 @@ class Home extends Component {
     else this.setState({ activeFilters: [...this.state.activeFilters, tag] });
   }
   render() {
-    const { activeFilters, navOpen } = this.state;
+    const { activeFilters } = this.state;
 
     return (
       <div className="container">

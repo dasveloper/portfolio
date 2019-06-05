@@ -1,39 +1,40 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
+import React, { Suspense, lazy } from "react";
 import "./assets/scss/App.scss";
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
-import Contact from "./pages/Contact";
-import Resume from "./pages/Resume";
 
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { ClipLoader } from "react-spinners";
 
+const Contact = lazy(() => import("./pages/Contact"));
+const Resume = lazy(() => import("./pages/Resume"));
 
-class App extends Component {
-  constructor(props, context) {
-    super(props, context);
-    this.state = {
-      navOpen: false
-    };
-  }
-
-  render() {
-    const { navOpen } = this.state;
-    return (
-      <Router>
+const App = () => {
+  return (
+    <Router>
+      <Suspense
+        fallback={
+          <div className="loader-wrapper">
+            <ClipLoader
+              className="foo"
+              sizeUnit={"px"}
+              size={80}
+              color={"#2f343b"}
+            />
+          </div>
+        }
+      >
         <div>
           <Nav />
-
           <Route path="/" exact component={Home} />
           <Route path="/contact" component={Contact} />
           <Route path="/resume" component={Resume} />
-
           <Footer />
         </div>
-      </Router>
-    );
-  }
-}
+      </Suspense>
+    </Router>
+  );
+};
 
 export default App;

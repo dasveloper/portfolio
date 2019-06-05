@@ -50,10 +50,17 @@
       margin: 1rem 0;
       justify-content: flex-start;
       align-items: center;
-      .social-icon {
-        font-size: 1.6rem;
-        margin-right: 1rem;
-        color: $gray-medium;
+      .social-link {
+        .social-icon {
+          font-size: 1.6rem;
+          margin-right: 1rem;
+          color: $gray-medium;
+        }
+        &:hover {
+          .social-icon {
+            color: $black;
+          }
+        }
       }
     }
   }
@@ -92,7 +99,7 @@
         }
       }
       .submit-form {
-          background:$white;
+        background: $white;
         &:disabled {
           opacity: 0.4;
           pointer-events: none;

@@ -19,15 +19,14 @@ class Resume extends Component {
     };
   }
   render() {
-    const { pageNumber, numPages } = this.state;
     const { width } = this.state
 
     return (
       <div className="container ">
         <div className="resume-card-wrapper">
           <div className="resume-card-top">
-            <a download href={resumePdf} class="btn">Download PDF</a>
-            <a download href={resumeDoc}  class="btn">Download DOCX</a>
+            <a download href={resumePdf} className="btn">Download PDF</a>
+            <a download href={resumeDoc}  className="btn">Download DOCX</a>
 
           </div>
 

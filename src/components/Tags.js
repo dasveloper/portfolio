@@ -33,7 +33,7 @@ const Tags = ({toggleFilters, activeFilters}) => {
         {tags.map((tag, i) => {
           return (
             <button
-            key={i}
+              key={i}
               className={`tag ${activeFilters.includes(tag) ? "active" : ""}`}
               onClick={() => toggleFilters(tag)}
             >
