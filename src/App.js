@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { ClipLoader } from "react-spinners";
 
 const Contact = lazy(() => import("./pages/Contact"));
 const Resume = lazy(() => import("./pages/Resume"));
@@ -16,12 +15,7 @@ const App = () => {
       <Suspense
         fallback={
           <div className="loader-wrapper">
-            <ClipLoader
-              className="foo"
-              sizeUnit={"px"}
-              size={80}
-              color={"#2f343b"}
-            />
+            <div class="loader" />
           </div>
         }
       >
