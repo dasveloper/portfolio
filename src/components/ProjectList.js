@@ -43,6 +43,10 @@ import WishWatchLogo from "../assets/images/wishwatch-logo.png";
 import RYBomb from "../assets/images/rybomb-mobile.png";
 import RYBombLogo from "../assets/images/rybomb-logo.jpg";
 
+//RYBomb
+import NewBrew from "../assets/images/newbrew-mobile.png";
+import NewBrewLogo from "../assets/images/newbrew-logo.png";
+
 //import ToiletTarget from "../assets/images/toilet-target-desktop.png";
 
 import { FaGithub, FaLink } from "react-icons/fa";
@@ -120,17 +124,6 @@ const projects = [
       "WishWatch is a SAAS wishlist platform for eCommerce businesses. Allow you customers to save your products for future purchase reducing abandonment, in turn customers will recieve automatic updates on price drops and deals."
   },
   {
-    name: "Learning Leathercraft",
-    image: LearningLeathercraft,
-    logo: LearningLeathercraftLogo,
-    color: "#de001d",
-    link: "https://www.learningleathercraft.com",
-    git: "https://github.com/dasveloper/learning-leathercraft",
-    tags: ["In Production", "React", "GatsbyJS", "Photography"],
-    description:
-      "Learning Leathercraft is a blog focusing on the art of leathercrafting to help beginners learn more about the craft. Learning Leathercraft features articles on the industry, beginner tutorials, patterns, and project showcases."
-  },
-  {
     name: "Sprout",
     image: Sprout,
     logo: SproutLogo,
@@ -141,17 +134,18 @@ const projects = [
     description:
       "Raising a kid is expensive, averaging over $200,000. Sprout is a crowdfunding platform aimed at expecting parents that allows friends and family to contribute to goals you set up."
   },
-
   {
-    name: "CORD",
-    image: Cord,
-    logo: CordLogo,
-    color: "#f8f8f8",
-    link: "https://www.kickstarter.com/projects/519083647/cord-knives",
-    tags: ["In Production", "Physical Product", "Photoshop", "Illustrator"],
+    name: "Learning Leathercraft",
+    image: LearningLeathercraft,
+    logo: LearningLeathercraftLogo,
+    color: "#de001d",
+    link: "https://www.learningleathercraft.com",
+    git: "https://github.com/dasveloper/learning-leathercraft",
+    tags: ["In Production", "React", "GatsbyJS", "Photography"],
     description:
-      "CORD is a series of high quality, customizable, minimalistic knives. Made from 1095 high carbon steel in two colors and lengths, and wrapped in high-quality 550 paracord in over fifty colors, you can truly make your CORD your own."
+      "Learning Leathercraft is a blog focusing on the art of leathercrafting to help beginners learn more about the craft. Learning Leathercraft features articles on the industry, beginner tutorials, patterns, and project showcases."
   },
+
   {
     name: "Deetz",
     image: Deetz,
@@ -163,6 +157,23 @@ const projects = [
     description:
       "Deetz allows users to collect names, emails, addresses, and phone number from anyone with a shareable link. With a quick setup, zero cost, and intuitive interface, Deetz is a must have when it comes to collecting contacts."
   },
+  {
+    name: "CORD",
+    image: Cord,
+    logo: CordLogo,
+    color: "#f8f8f8",
+    link: "https://www.kickstarter.com/projects/519083647/cord-knives",
+    tags: [
+      "In Production",
+      "Physical Product",
+      "Photography",
+      "Photoshop",
+      "Illustrator"
+    ],
+    description:
+      "CORD is a series of high quality, customizable, minimalistic knives. Made from 1095 high carbon steel in two colors and lengths, and wrapped in high-quality 550 paracord in over fifty colors, you can truly make your CORD your own."
+  },
+
   {
     name: "Slimage",
     image: Slimage,
@@ -199,6 +210,15 @@ const projects = [
     link: "https://itunes.apple.com/us/app/rybomb/id1192726355",
     description:
       "RYBomb is cross-platform mobile game where you mix and match colors to combine them into new colors, keep mixing before you run out of room and collect powerful boosts along the way."
+  },
+  {
+    name: "NewBrew",
+    image: NewBrew,
+    logo: NewBrewLogo,
+    color: "#f5b840",
+    tags: ["Discontinued", "React Native", "Mobile App", "Firebase"],
+    git: "https://github.com/dasveloper/NewBrew",
+    description: "NewBrew is an app designed to connect breweries to beer lovers. When a brewery releases a new beer, the brewmasters can upload it's details to NewBrew and push notifications are automatically sent to all subscribers."
   }
   // {
   //   name: "Toilet Target Stickers",
@@ -239,6 +259,7 @@ class ProjectList extends Component {
                     <div className="project-button-wrapper">
                       {project.link && (
                         <a
+                          target="_blank"
                           href={project.link}
                           className="project-button website"
                         >
