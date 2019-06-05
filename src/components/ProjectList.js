@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import LazyLoad from 'react-lazyload';
 
 //Mailslot
 import Mailslot from "../assets/images/mailslot-desktop.png";
@@ -279,7 +280,10 @@ class ProjectList extends Component {
                     style={{ backgroundColor: project.color }}
                     className="project-image-wrapper"
                   >
+                  <LazyLoad offset={100}>
                     <img className="project-image" src={project.image} />
+                    </LazyLoad>
+
                   </div>
                   <hr />
                 </div>
