@@ -4,10 +4,8 @@ import resumeDoc from "../assets/files/Justin Harr Resume.docx";
 
 import Measure from 'react-measure'
 
-import { Document, Page, pdfjs } from "react-pdf";
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${
-  pdfjs.version
-}/pdf.worker.js`;
+import { Document,Page } from 'react-pdf';
+
 
 class Resume extends Component {
   constructor(props) {

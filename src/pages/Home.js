@@ -3,8 +3,8 @@ import Intro from "../components/Intro";
 import Tags from "../components/Tags";
 import ProjectList from "../components/ProjectList.js";
 class Home extends Component {
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
     this.state = {
       activeFilters: []
     };

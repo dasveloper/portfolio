@@ -21,8 +21,8 @@ const initialFormValues = {
       }
 };
 class ContactForm extends Component {
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
     this.state = {
       formSubmitting: false,
       formSuccess: false,
