@@ -1,5 +1,5 @@
 .project-list {
-  padding: 1rem;
+  padding: .5rem;
   min-height: 100vh;
   background: $white;
   box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -7,7 +7,16 @@
   .project-list-inner {
     margin: auto;
     max-width: 1200px;
-
+    .project-list-header{
+      .project-count{
+        font-size: 1rem;
+        font-weight: 300;
+        color: $gray-dark;
+        span{
+          font-weight: 400;
+        }
+      }
+    }
     .project {
       display: flex;
       flex-direction: column;
