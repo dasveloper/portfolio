@@ -4,7 +4,7 @@ import resumeDoc from "../assets/files/Justin Harr Resume.docx";
 
 import Measure from 'react-measure'
 
-import { Document,Page } from 'react-pdf';
+import { Document,Page } from 'react-pdf/dist/entry.webpack';
 
 
 class Resume extends Component {
