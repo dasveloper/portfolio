@@ -101,6 +101,7 @@ const projects = [
     description:
       "Email marketing is vital for every online business. Incentivize email sign ups by giving away free digital products in exchange for email addresses. With mailslot you can quickkly and easily upload digital products, set up customizable landing pages, and track email subscriptions."
   }, 
+  
   {
     name: "Nearby Breweries (SEO Experiment)",
     image: BreweriesIn,
