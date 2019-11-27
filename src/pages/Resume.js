@@ -23,8 +23,8 @@ class Resume extends Component {
       <div className="container ">
         <div className="resume-card-wrapper">
           <div className="resume-card-top">
-            <a download href={resumePdf} className="btn">Download PDF</a>
-            <a download href={resumeDoc}  className="btn">Download DOCX</a>
+            <a download="Justin Harr's Resume" href={resumePdf} className="btn">Download PDF</a>
+            <a download="Justin Harr's Resume" href={resumeDoc}  className="btn">Download DOCX</a>
 
           </div>
 
