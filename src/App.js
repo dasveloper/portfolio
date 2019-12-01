@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import React from "react";
 import "./assets/scss/App.scss";
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
@@ -6,19 +6,13 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-const Contact = lazy(() => import("./pages/Contact"));
-const Resume = lazy(() => import("./pages/Resume"));
+import Contact from "./pages/Contact";
+import  Resume  from "./pages/Resume";
 
 const App = () => {
   return (
     <Router>
-      <Suspense
-        fallback={
-          <div className="loader-wrapper">
-            <div class="loader" />
-          </div>
-        }
-      >
+
         <div>
           <Nav />
           <Route path="/" exact component={Home} />
@@ -26,7 +20,6 @@ const App = () => {
           <Route path="/resume" component={Resume} />
           <Footer />
         </div>
-      </Suspense>
     </Router>
   );
 };
