@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import LazyLoad from "react-lazyload";
+import LazyLoad from 'react-lazyload';
 
 //Mailslot
 import Mailslot from "../assets/images/mailslot-desktop.png";
@@ -48,48 +48,11 @@ import RYBombLogo from "../assets/images/rybomb-logo.jpg";
 import NewBrew from "../assets/images/newbrew-mobile.png";
 import NewBrewLogo from "../assets/images/newbrew-logo.png";
 
-//Portfolio
-import Portfolio from "../assets/images/portfolio-desktop.png";
-import PortfolioLogo from "../assets/images/avatar.png";
-
-//MakerTeams
-import MakerTeams from "../assets/images/makerteams-desktop.png";
-import MakerTeamsLogo from "../assets/images/makerteams-logo.png";
-
-//RagerGear
-import RagerGear from "../assets/images/ragergear-desktop.png";
-import RagerGearLogo from "../assets/images/ragergear-logo.png";
-
-//RagerGear
-import BreweriesIn from "../assets/images/breweriesin-desktop.png";
-import BreweriesInLogo from "../assets/images/breweriesin-logo.png";
-
 //import ToiletTarget from "../assets/images/toilet-target-desktop.png";
 
 import { FaGithub, FaLink } from "react-icons/fa";
 
 const projects = [
-  {
-    name: "Portfolio",
-    image: Portfolio,
-    logo: PortfolioLogo,
-    color: "#fcfcfc",
-    tags: ["In Production", "React", "Preact", "Firebase", "SCSS"],
-    git: "https://github.com/dasveloper/portfolio",
-    description:
-      "Woah, it's getting meta. This is my portfolio, the website you're on now. This site was developed to showcase my projects, give you a peek into my interests, and possibly land me a job."
-  },
-  {
-    name: "MakerTeams",
-    image: MakerTeams,
-    logo: MakerTeamsLogo,
-    color: "#ffaa02",
-    tags: ["In Production", "React", "Firebase", "SCSS"],
-    link: "https://maker-teams.herokuapp.com/",
-    git: "https://github.com/dasveloper/MakerTeams",
-    description:
-      "MakerTeams is a platform built for makers of all types to come together to build something great. Create, recruit, and grow a team of unique makers from a variety of fields capable of tackling any project together."
-  },
   {
     name: "Mailslot",
     image: Mailslot,
@@ -278,8 +241,7 @@ const projects = [
     color: "#f5b840",
     tags: ["Discontinued", "React Native", "Mobile App", "Firebase"],
     git: "https://github.com/dasveloper/NewBrew",
-    description:
-      "NewBrew is an app designed to connect breweries to beer lovers. When a brewery releases a new beer, the brewmasters can upload it's details to NewBrew and push notifications are automatically sent to all subscribers."
+    description: "NewBrew is an app designed to connect breweries to beer lovers. When a brewery releases a new beer, the brewmasters can upload it's details to NewBrew and push notifications are automatically sent to all subscribers."
   }
   // {
   //   name: "Toilet Target Stickers",
@@ -291,75 +253,64 @@ const projects = [
 class ProjectList extends Component {
   render() {
     const { activeFilters } = this.props;
-    const filteredProjects = projects.filter(project => {
-      return activeFilters.every(filter => project.tags.indexOf(filter) >= 0);
-    });
     return (
       <div className="project-list">
         <div className="project-list-inner">
-          <div className="project-list-header">
-            <p className="project-count">Project Count: <span>{filteredProjects.length}</span></p> 
-          </div>
-          {filteredProjects.map(function(project, i) {
+          {projects.map(function(project, i) {
             return (
-              <div key={i} className="project">
-                <div className="project-description-wrapper">
-                  <div className="project-description-header">
-                    <div
-                      style={{ backgroundColor: project.color }}
-                      className="project-logo"
-                    >
-                      <img alt={`${project.name} logo `} src={project.logo} />
-                    </div>
-                    <h3 className="project-title">{project.name}</h3>
-                  </div>
-                  <div className="project-tags">
-                    {project.tags.map(function(tag, i) {
-                      return (
-                        <div key={i} className="project-tag">
-                          {tag}
-                        </div>
-                      );
-                    })}
-                  </div>
-                  <p className="project-description">
-                    {project.description ||
-                      "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"}
-                  </p>
-                  <div className="project-button-wrapper">
-                    {project.link && (
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={project.link}
-                        className="project-button website"
+              activeFilters.every(r => project.tags.indexOf(r) >= 0) && (
+                <div key={i} className="project">
+                  <div className="project-description-wrapper">
+                    <div className="project-description-header">
+                      <div
+                        style={{ backgroundColor: project.color }}
+                        className="project-logo"
                       >
-                        <FaLink className="project-button-icon" />
-                        Website
-                      </a>
-                    )}
-                    {project.git && (
-                      <a href={project.git} className="project-button github">
-                        <FaGithub className="project-button-icon" />
-                        GitHub
-                      </a>
-                    )}
+                        <img alt={`${project.name} logo `} src={project.logo} />
+                      </div>
+                      <h3 className="project-title">{project.name}</h3>
+                    </div>
+                    <div className="project-tags">
+                      {project.tags.map(function(tag, i) {
+                        return <div key={i} className="project-tag">{tag}</div>;
+                      })}
+                    </div>
+                    <p className="project-description">
+                      {project.description ||
+                        "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"}
+                    </p>
+                    <div className="project-button-wrapper">
+                      {project.link && (
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={project.link}
+                          className="project-button website"
+                        >
+                          <FaLink className="project-button-icon" />
+                          Website
+                        </a>
+                      )}
+                      {project.git && (
+                        <a href={project.git} className="project-button github">
+                          <FaGithub className="project-button-icon" />
+                          GitHub
+                        </a>
+                      )}
+                    </div>
                   </div>
-                </div>
-                <div
-                  style={{ backgroundColor: project.color }}
-                  className="project-image-wrapper"
-                >
+                  <div
+                    style={{ backgroundColor: project.color }}
+                    className="project-image-wrapper"
+                  >
                   <LazyLoad offset={100}>
-                    <img
-                      alt={`${project.name} screenshot`}
-                      className="project-image"
-                      src={project.image}
-                    />
-                  </LazyLoad>
+                    <img alt={`${project.name} screenshot`}className="project-image" src={project.image} />
+                    </LazyLoad>
+
+                  </div>
+                  <hr />
                 </div>
-                <hr />
-              </div>
+              )
             );
           })}
         </div>

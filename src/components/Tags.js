@@ -16,7 +16,6 @@ const tags = [
   "MySql",
   "Postgres",
   "Mongo",
-  "Preact",
   "Illustrator",
   "Photoshop",
   "Photography",
