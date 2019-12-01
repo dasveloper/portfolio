@@ -1,7 +1,6 @@
 import React from "react";
 import ContactForm from "../components/ContactForm";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 const Contact = () => {
   return (
@@ -17,8 +16,8 @@ const Contact = () => {
             </p>
             <div className="email-wrapper">
               <label className="email-label">Primary email:</label>
-              <a className="email" href="mailto:me@justinharr.com">
-                me@justinharr.com
+              <a className="email" href="mailto:hello@justinharr.com">
+                hello@justinharr.com
               </a>
             </div>
             <div className="social-icons-wrapper">

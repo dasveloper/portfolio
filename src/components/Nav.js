@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 
 class Nav extends Component {
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
     this.state = {
       navOpen: false
     };

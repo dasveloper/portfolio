@@ -4,10 +4,8 @@ import resumeDoc from "../assets/files/Justin Harr Resume.docx";
 
 import Measure from 'react-measure'
 
-import { Document, Page, pdfjs } from "react-pdf";
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${
-  pdfjs.version
-}/pdf.worker.js`;
+import { Document,Page } from 'react-pdf/dist/entry.webpack';
+
 
 class Resume extends Component {
   constructor(props) {
@@ -25,8 +23,8 @@ class Resume extends Component {
       <div className="container ">
         <div className="resume-card-wrapper">
           <div className="resume-card-top">
-            <a download href={resumePdf} className="btn">Download PDF</a>
-            <a download href={resumeDoc}  className="btn">Download DOCX</a>
+            <a download="Justin Harr's Resume" href={resumePdf} className="btn">Download PDF</a>
+            <a download="Justin Harr's Resume" href={resumeDoc}  className="btn">Download DOCX</a>
 
           </div>
 
